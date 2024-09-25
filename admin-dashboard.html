@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+    background:url( lib\ image.jfif);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+    .logo{
+        font-size: 60px;;
+        margin:auto;
+
+    }
+    .innerdiv{
+        text-align: center;
+        margin:100px;
+        background-color:rgba(129, 123, 215, 0.842);
+        
+    }
+    .leftinnerdiv{
+        float:left;
+        width:25%;
+    }
+    .rightinnerdiv{
+        float:right;
+        width:75%;
+    }
+    .greenbtn{
+        background-color: brown;
+        color:white;
+        width:95%;
+        height:40px;
+        margin-top: 8px;
+    }
+    label{
+        padding:10px;
+        display: inline-block;
+
+    }
+    
+</style>
+<body>
+    <div class="container">
+    <div class="innerdiv">
+    <div class="logo">VIRTUAL<b style="color:black"> LIBRARY</b></div>
+        <div class="leftinnerdiv">
+            <button class="greenbtn">Admin</button>
+            <button class="greenbtn" onclick="openpart('addbook')">ADD BOOK</button>
+            <button class="greenbtn" onclick="openpart('bookreport')">BOOK REPORT</button>
+            <button class="greenbtn" onclick="openpart('bookrequestapprove')">BOOK REQUEST APPROVE</button>
+            <!-- <button class="greenbtn" onclick="openpart('addstudent')">ADD STUDENT</button> -->
+            <button class="greenbtn" onclick="openpart('studentrecord')">STUDENT REPORT</button>
+            <button class="greenbtn" onclick="openpart('issuebook')">ISSUE BOOK</button>
+            <button class="greenbtn" onclick="openpart('issuereport')">ISSUE REPORT</button>
+            <a href="index.html"><button class="greenbtn">LOGOUT</button></a>
+        </div> 
+
+        
+
+        <div class="rightinnerdiv">
+            <div id="addbook" class="innerright portion" style="display:none">
+                <button class="greenbtn">ADD BOOK</button>
+                <form action="addperson" method="post" enctype="multipart/form-data">   ADD FORM ACTION
+                <label style="color:white;">Book Name:</label><input type="text" name="bookname"/></br>
+                <label style="color:white;">Author:</label><input type="text" name="author"/></br>
+                <label style="color:white;" >Publication:</label><input type="text" name="bookpub"/></br>
+                <div style="color:white;">Branch:</label><input type="radio" name="branch" value="it"/>ISE
+                    <input type="radio" name="branch" value="civil">Civil<div style="margin-left: 80px;">
+                    <input type="radio" name="branch" value="civil">CSE<input type="radio" name="branch" value="ec">EC</div>
+                <input type="submit" value="SUBMIT"/>
+                </form> 
+                </div>
+        </div>
+
+    </div>
+    </div>
+    <script>
+        function openpart(portion){
+            var i;
+            var x = document.getElementsByClassName("portion");
+            for(i=0;i<x.length;i++){
+                x[i].style.display="none";
+            }
+            document.getElementById(portion).style.display="block";
+        }
+    </script>
+</body>
+</html>

@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="">
     <title>Document</title>
 </head>
+
+<style>
+    body{
+    background:url( lib\ image.jfif);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+    .logo{
+        font-size:60px;;
+        margin:auto;
+    }
+    .innerdiv{
+        text-align: center;
+        margin:100px;
+        background-color:blueviolet;
+    }
+    .leftinnerdiv{
+        float:left;
+        width:25%;
+    }
+    .rightinnerdiv{
+        float:right;
+        width:75%;
+    }
+    .greenbtn{
+        background-color: brown;
+        color:white;
+        width:95%;
+        height:40px;
+        margin-top: 8px;
+
+    }
+</style>
 <body>
-    <p> hello, this is rakshitha</p>
-    
-</body>
-</html>
+    <div class="container">
+    <div class="innerdiv">
+    <div class="logo">VIRTUAL<b style="color:black"> LIBRARY</b></div>
+        <div class="leftinnerdiv">
+            <button class="greenbtn">Student</button>
+            <button class="greenbtn" onclick="openpart('myaccount')">MY ACCOUNT</button>
+            <button class="greenbtn" onclick="openpart('requestbook')">REQUEST BOOK</button>
+            <button class="greenbtn" onclick="openpart('stubookreport')">BOOK REPORT</button>
+            <a href="index.html"><button class="greenbtn">LOGOUT</button></a>
+        </div> 
+
+        
+
+    </div>
+    </div>
+    </body>
